@@ -13,6 +13,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     // Comment for git testing
     @IBOutlet weak var regionPicker: UIPickerView!
     @IBOutlet weak var regionBtn: UIButton!
+    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var countryField: UITextField!
+    @IBOutlet weak var buyNowBtn: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var streetLabel: UILabel!
+    @IBOutlet weak var streetField: UITextField!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityField: UITextField!
+    @IBOutlet weak var divider: UIView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var pillImage: UIImageView!
+    @IBOutlet weak var successImage: UIImageView!
     
     let regions: [String] = ["Munster", "Connaght","Leinster","Ulster"]
 
@@ -29,6 +44,27 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     @IBAction func regionBtnPressed(_ sender: AnyObject) {
         regionPicker.isHidden = false
+        countryLabel.isHidden = true
+        countryField.isHidden = true
+    }
+    
+    @IBAction func buyNowBtnPressed(_ sender: AnyObject) {
+        regionBtn.isHidden = true
+        regionLabel.isHidden = true
+        countryLabel.isHidden = true
+        countryField.isHidden = true
+        nameLabel.isHidden = true
+        nameField.isHidden = true
+        streetLabel.isHidden = true
+        streetField.isHidden = true
+        cityLabel.isHidden = true
+        cityField.isHidden = true
+        divider.isHidden = true
+        priceLabel.isHidden = true
+        titleLabel.isHidden = true
+        pillImage.isHidden = true
+        successImage.isHidden = false
+        buyNowBtn.isHidden = true
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
